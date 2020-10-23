@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
-const Login = () => {
-    return (
-        <div>
-            <h2>
-                Login Page
-            </h2>
-        </div>
-    );
+const Container = styled.div`
+  display: grid;
+  place-items: center;
+`;
+
+const Login: React.FC = () => {
+  return (
+    <Container>
+      <h2>Login Page</h2>
+    </Container>
+  );
 };
 
 export default Login;
