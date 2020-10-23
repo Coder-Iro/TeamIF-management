@@ -1,52 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ae2eae5-dedb-46d3-8939-b2839b76dddb" name="Default Changelist" comment="Add react-router-dom, react-sidebar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="0e519638-e525-4819-9e94-f9d14de416e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript JSX File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="https://github.com/Coder-Iro/TeamIF-management" />
-      </set>
-    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -54,150 +20,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectId" id="1jDnB246yFobvXnZAbCE3TtKMga" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="G:\Web_Project\TeamIF\TeamIF-management\node_modules\prettier" />
-    <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="G:\Web_Project\TeamIF\TeamIF-management\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="7ae2eae5-dedb-46d3-8939-b2839b76dddb" name="Default Changelist" comment="" />
-      <created>1603347394258</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1603347394258</updated>
-      <workItem from="1603347397551" duration="1454000" />
-      <workItem from="1603425771169" duration="1494000" />
-      <workItem from="1603456882534" duration="1068000" />
-    </task>
-    <task id="LOCAL-00001" summary="Add react-router-dom, react-sidebar">
-      <created>1603348712031</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603348712031</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add react-router-dom, react-sidebar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add react-router-dom, react-sidebar" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="94" y="147" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603348683120">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state x="94" y="147" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1603348683120" />
-    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603457521485">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1603457521485" />
-    <state width="1259" height="325" key="GridCell.Tab.0.bottom" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.0.center" timestamp="1603427323072">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1603427323072" />
-    <state width="1259" height="325" key="GridCell.Tab.0.left" timestamp="1603427323072">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1603427323072" />
-    <state width="1259" height="325" key="GridCell.Tab.0.right" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.1.bottom" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.1.center" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.1.left" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.1.right" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.2.bottom" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.2.bottom/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.2.center" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.2.center/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.2.left" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.2.left/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.2.right" timestamp="1603427323073">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.2.right/0.0.1280.984@0.0.1280.984" timestamp="1603427323073" />
-    <state width="1259" height="325" key="GridCell.Tab.3.bottom" timestamp="1603427323074">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.3.bottom/0.0.1280.984@0.0.1280.984" timestamp="1603427323074" />
-    <state width="1259" height="325" key="GridCell.Tab.3.center" timestamp="1603427323074">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.3.center/0.0.1280.984@0.0.1280.984" timestamp="1603427323074" />
-    <state width="1259" height="325" key="GridCell.Tab.3.left" timestamp="1603427323074">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.3.left/0.0.1280.984@0.0.1280.984" timestamp="1603427323074" />
-    <state width="1259" height="325" key="GridCell.Tab.3.right" timestamp="1603427323074">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state width="1259" height="325" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1603427323074" />
-    <state x="282" y="193" key="SettingsEditor" timestamp="1603457960636">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="141" y="136" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1603427450676" />
-    <state x="282" y="193" key="SettingsEditor/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1603457960636" />
-    <state x="232" y="225" key="Vcs.Push.Dialog.v2" timestamp="1603348714851">
-      <screen x="0" y="0" width="1280" height="984" />
-    </state>
-    <state x="232" y="225" key="Vcs.Push.Dialog.v2/0.0.1280.984@0.0.1280.984" timestamp="1603348714851" />
   </component>
 </project>
