@@ -22,6 +22,9 @@
     <list default="true" id="7ae2eae5-dedb-46d3-8939-b2839b76dddb" name="Default Changelist" comment="Add react-router-dom, react-sidebar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,12 @@
       </set>
     </option>
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1jDnB246yFobvXnZAbCE3TtKMga" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,11 +64,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
-    <property name="ts.external.directory.path" value="I:\Projects\TeamIF-management\node_modules\typescript\lib" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="G:\Web_Project\TeamIF\TeamIF-management\node_modules\prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="G:\Web_Project\TeamIF\TeamIF-management\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,7 +86,7 @@
       <updated>1603347394258</updated>
       <workItem from="1603347397551" duration="1454000" />
       <workItem from="1603425771169" duration="1494000" />
-      <workItem from="1603456882534" duration="52000" />
+      <workItem from="1603456882534" duration="1068000" />
     </task>
     <task id="LOCAL-00001" summary="Add react-router-dom, react-sidebar">
       <created>1603348712031</created>
@@ -108,6 +122,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="94" y="147" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1603348683120" />
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603457521485">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1603457521485" />
     <state width="1259" height="325" key="GridCell.Tab.0.bottom" timestamp="1603427323073">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -172,10 +190,11 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state width="1259" height="325" key="GridCell.Tab.3.right/0.0.1280.984@0.0.1280.984" timestamp="1603427323074" />
-    <state x="141" y="136" key="SettingsEditor" timestamp="1603427450676">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="282" y="193" key="SettingsEditor" timestamp="1603457960636">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="141" y="136" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1603427450676" />
+    <state x="282" y="193" key="SettingsEditor/0.0.2560.1400/-1920.349.1920.1040@0.0.2560.1400" timestamp="1603457960636" />
     <state x="232" y="225" key="Vcs.Push.Dialog.v2" timestamp="1603348714851">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
