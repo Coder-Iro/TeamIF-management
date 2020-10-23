@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Login from './pages/Login';
 
+import './styles/global.css';
+
 const index = (
   <BrowserRouter basename='/'>
     <Switch>
