@@ -50,7 +50,7 @@ const Login: React.FC = () => {
           <Input type='text' id='id' placeholder='' />
 
           <Label htmlFor='password'>비밀번호</Label>
-          <Input type='text' id='password' placeholder='' />
+          <Input type='password' id='password' placeholder='' />
 
           <LoginButton>로그인</LoginButton>
         </InputContainer>
