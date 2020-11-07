@@ -38,6 +38,8 @@ const LoginButton = styled.button`
   background-color: #0048d9;
 
   margin-top: 1rem;
+
+  cursor: pointer;
 `;
 
 const Login: React.FC = () => {
