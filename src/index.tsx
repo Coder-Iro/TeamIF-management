@@ -15,7 +15,7 @@ const index = (
         <Route exact path='/' component={Login} />
       </Switch>
     </BrowserRouter>
-    <ToastContainer />
+    <ToastContainer position='top-center' />
   </>
 );
 
