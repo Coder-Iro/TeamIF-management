@@ -16,8 +16,12 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const LoginFooter: React.FC = () => {
-  return <Button>로그인</Button>;
+interface LoginFooterProps {
+  readonly onLoginClick?: React.MouseEventHandler;
+}
+
+const LoginFooter: React.FC<LoginFooterProps> = ({ onLoginClick }) => {
+  return <Button onClick={onLoginClick}>로그인</Button>;
 };
 
 export default LoginFooter;
