@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { toast } from 'react-toastify';
 import Label from '../atomics/Label';
 import Input from '../atomics/Input';
 import LoginHeader from '../components/Login/LoginHeader';
 import LoginFooter from '../components/Login/LoginFooter';
+import Api from '../api';
+import TokenUtil from '../api/TokenUtil';
 
 const Container = styled.div`
   height: 100vh;
@@ -47,6 +50,34 @@ const Login: React.FC = () => {
     }));
   };
 
+  const onLoginClick = () => {
+    const korean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+    if (korean.test(input.id) || korean.test(input.password)) {
+      toast.warn('아이디 또는 비밀번호 형식이 올바르지 않습니다.');
+      return;
+    }
+
+    if (input.id.trim() === '' || input.password.trim() === '') {
+      toast.warn('아이디 또는 비밀번호가 빈 칸입니다.');
+      return;
+    }
+
+    Api.put('/member', null, {
+      headers: {
+        Authorization: `Basic ${btoa(`${input.id}:${input.password}`)}`
+      }
+    })
+      .then(() => {
+        TokenUtil.set(btoa(`${input.id}:${input.password}`));
+        toast('환영합니다.');
+      })
+      .catch((e) => {
+        if (e.response && e.response.status === 401) {
+          toast.error('아이디 또는 비밀번호가 올바르지 않습니다.');
+        }
+      });
+  };
+
   return (
     <Container>
       <div>
@@ -71,7 +102,7 @@ const Login: React.FC = () => {
               onChange={onInputChange('password')}
             />
 
-            <LoginFooter />
+            <LoginFooter onLoginClick={onLoginClick} />
           </div>
         </InputContainer>
       </div>
