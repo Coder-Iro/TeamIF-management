@@ -51,7 +51,7 @@ const Login: React.FC = () => {
   return (
     <Container>
       <div>
-        <Title>TeamIF</Title>
+        <Title id='Login__title'>TeamIF Management</Title>
         <InputContainer>
           <div>
             <Label htmlFor='id'>아이디</Label>
