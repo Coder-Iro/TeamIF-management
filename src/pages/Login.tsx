@@ -60,11 +60,7 @@ const Login: React.FC = () => {
             <Label htmlFor='password'>비밀번호</Label>
             <Input type='password' id='password' placeholder='' />
 
-            <div>
-              <Button>로그인</Button>
-              <br />
-              <Button>회원가입</Button>
-            </div>
+            <Button>로그인</Button>
           </div>
         </InputContainer>
       </div>
