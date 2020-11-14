@@ -15,9 +15,12 @@ const Api = axios.create({
 Api.interceptors.response.use(
   (res) => res,
   (e) => {
-    if (!e.response) return Promise.reject(e);
+    if (!e.response) {
+      toast.error('🔥 네트워크 오류가 발생하였습니다.');
+      return Promise.reject(e);
+    }
     if (e.response.status === 500) {
-      toast.error('🔥 오류가 발생하였습니다. 잠시후 다시 시도해주세요');
+      toast.error('🔥 오류가 발생하였습니다.');
     }
 
     return Promise.reject(e);
