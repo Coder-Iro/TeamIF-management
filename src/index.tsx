@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import Login from './pages/Login';
 
 import './styles/global.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const index = (
   <>

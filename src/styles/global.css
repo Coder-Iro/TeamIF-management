@@ -15,3 +15,7 @@ body {
     background-color: var(--color-background);
     color: #333333;
 }
+
+.Toastify__toast {
+    font-size: 12px;
+}
