@@ -12,6 +12,9 @@ const Container = styled.div`
 `;
 
 const InputContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
   & input {
     display: block;
     margin-bottom: 20px;
@@ -23,11 +26,13 @@ const InputContainer = styled.div`
 `;
 
 const Title = styled.h1`
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: 2rem;
 `;
 
-const LoginButton = styled.button`
+const Button = styled.button`
   width: 250px;
   height: 36px;
 
@@ -48,13 +53,19 @@ const Login: React.FC = () => {
       <div>
         <Title>TeamIF</Title>
         <InputContainer>
-          <Label htmlFor='id'>아이디</Label>
-          <Input type='text' id='id' placeholder='' />
+          <div>
+            <Label htmlFor='id'>아이디</Label>
+            <Input type='text' id='id' placeholder='' />
 
-          <Label htmlFor='password'>비밀번호</Label>
-          <Input type='password' id='password' placeholder='' />
+            <Label htmlFor='password'>비밀번호</Label>
+            <Input type='password' id='password' placeholder='' />
 
-          <LoginButton>로그인</LoginButton>
+            <div>
+              <Button>로그인</Button>
+              <br />
+              <Button>회원가입</Button>
+            </div>
+          </div>
         </InputContainer>
       </div>
     </Container>
