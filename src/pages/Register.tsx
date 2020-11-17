@@ -66,7 +66,9 @@ const Register: React.FC = () => {
   };
 
   if (success) {
-    return <RegisterDetail code={code} />;
+    return (
+      <RegisterDetail code={code} nickname='YourNickname' rrole='YourRole' />
+    );
   }
 
   return (
