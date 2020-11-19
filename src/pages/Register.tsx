@@ -43,7 +43,7 @@ const Register: React.FC = () => {
       return;
     }
 
-    Api.get('/check', {
+    Api.get('/check/', {
       params: {
         code
       }
