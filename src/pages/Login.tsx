@@ -62,7 +62,7 @@ const Login: React.FC = () => {
       return;
     }
 
-    Api.put('/member', null, {
+    Api.put('/member/', null, {
       headers: {
         Authorization: `Basic ${btoa(`${input.id}:${input.password}`)}`
       }

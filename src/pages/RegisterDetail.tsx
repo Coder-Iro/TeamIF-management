@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { toast } from 'react-toastify';
+import Axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import Label from '../atomics/Label';
 import Input from '../atomics/Input';
 import InputWidthButton from '../atomics/Button/InputWidthButton';
@@ -63,6 +65,7 @@ const RegisterDetail: React.FC<RegisterDetailProps> = ({
     email: '',
     github: ''
   });
+  const history = useHistory();
 
   if (!code.trim()) {
     return (
@@ -73,6 +76,26 @@ const RegisterDetail: React.FC<RegisterDetailProps> = ({
       </Container>
     );
   }
+
+  const checkEmail = (email: string): boolean => {
+    const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    return emailRegex.test(email);
+  };
+
+  const checkGitHub = (github: string): Promise<boolean> => {
+    const host = 'https://api.github.com/users/';
+    const result = Axios.head(`${host}${github}`)
+      .then(() => {
+        return true;
+      })
+      .catch((e) => {
+        if (e.response.status === 404) {
+          return false;
+        }
+        return false;
+      });
+    return result;
+  };
 
   const onInputChange = (type: keyof InputState) => (
     e: React.ChangeEvent<HTMLInputElement>
@@ -86,20 +109,51 @@ const RegisterDetail: React.FC<RegisterDetailProps> = ({
   const onEmailBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     if (e.target.value.trim() === '') return;
 
-    const emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    if (!emailRegex.test(e.target.value)) {
-      toast.warn('올바르지 않은 이메일입니다.');
+    if (checkEmail(e.target.value)) {
+      return;
     }
+
+    toast.warn('올바르지 않은 이메일입니다.');
   };
 
-  const onGitHubBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+  const onGitHubBlur = async (event: React.FocusEvent<HTMLInputElement>) => {
     if (event.target.value.trim() === '') return;
 
-    const host = 'https://api.github.com/users/';
-    Api.head(`${host}${event.target.value}`).catch((e) => {
-      if (e.response.state === 404) {
-        toast.error('존재하지 않는 GitHub 사용자입니다.');
-      }
+    const result = await checkGitHub(event.target.value);
+    if (result) {
+      return;
+    }
+
+    toast.warn('존재하지 않는 GitHub 사용자입니다.');
+  };
+
+  const onRegisterClick = async () => {
+    const blankCount = Object.values(input).filter(
+      (inputValue) => inputValue.trim() === '' || inputValue === '0'
+    );
+    if (blankCount.length > 0) {
+      toast.warn('빈 칸이 있습니다.');
+      return;
+    }
+    const result = await checkGitHub(input.github);
+    if (!checkEmail(input.email) || !result) {
+      toast.warn('이메일 또는 GitHub 아이디를 다시 확인해주세요.');
+      return;
+    }
+    if (input.password !== input.passwordConfirm) {
+      toast.warn('비밀번호를 다시 확인해주세요.');
+      return;
+    }
+
+    Api.post('/member/', {
+      code,
+      id: input.id,
+      password: input.password,
+      github: input.github,
+      email: input.email
+    }).then(() => {
+      toast('회원가입 성공! 로그인 후 이용해주세요.');
+      history.push('/login');
     });
   };
 
@@ -172,7 +226,7 @@ const RegisterDetail: React.FC<RegisterDetailProps> = ({
             />
           </div>
         </InputContainer>
-        <InputWidthButton>회원가입</InputWidthButton>
+        <InputWidthButton onClick={onRegisterClick}>회원가입</InputWidthButton>
       </div>
     </Container>
   );
