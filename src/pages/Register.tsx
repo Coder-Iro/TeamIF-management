@@ -35,6 +35,8 @@ const StyledInput = styled(Input)`
 const Register: React.FC = () => {
   const history = useHistory();
   const [code, setCode] = useState<string>('');
+  const [nickname, setNickname] = useState<string>('');
+  const [rrole, setRole] = useState<string>('');
   const [success, setSuccess] = useState<boolean>(false);
 
   const onNextClick = () => {
@@ -58,6 +60,8 @@ const Register: React.FC = () => {
         }).then((confirm) => {
           if (!confirm) return;
           setSuccess(true);
+          setNickname(codeInfo.nickname);
+          setRole(codeInfo.jobs.join(', '));
         });
       })
       .catch(() => {
@@ -66,9 +70,7 @@ const Register: React.FC = () => {
   };
 
   if (success) {
-    return (
-      <RegisterDetail code={code} nickname='YourNickname' rrole='YourRole' />
-    );
+    return <RegisterDetail code={code} nickname={nickname} rrole={rrole} />;
   }
 
   return (
