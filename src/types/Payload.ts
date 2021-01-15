@@ -6,3 +6,7 @@ export interface CodeType {
   readonly nickname: string;
   readonly username: string;
 }
+
+export interface ProfileType {
+  // TODO: GET /member 엔드포인트 결과
+}
