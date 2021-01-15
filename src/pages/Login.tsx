@@ -50,7 +50,7 @@ const Login: React.FC = () => {
     }));
   };
 
-  const onLoginClick = () => {
+  const onLoginClick = async () => {
     const korean = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
     if (korean.test(input.id) || korean.test(input.password)) {
       toast.warn('아이디 또는 비밀번호 형식이 올바르지 않습니다.');
@@ -62,20 +62,21 @@ const Login: React.FC = () => {
       return;
     }
 
-    Api.get('/login/', {
-      headers: {
-        Authorization: `Basic ${btoa(`${input.id}:${input.password}`)}`
-      }
-    })
-      .then(() => {
-        TokenUtil.set(btoa(`${input.id}:${input.password}`));
-        toast('환영합니다.');
-      })
-      .catch((e) => {
-        if (e.response && e.response.status === 401) {
-          toast.error('아이디 또는 비밀번호가 올바르지 않습니다.');
+    try {
+      const token = btoa(`${input.id}:${input.password}`);
+      await Api.get('/login/', {
+        headers: {
+          Authorization: `Basic ${token}`
         }
       });
+
+      TokenUtil.set(token);
+      toast('환영합니다.');
+    } catch (e) {
+      if (e.response && e.response.status === 401) {
+        toast.error('아이디 또는 비밀번호가 올바르지 않습니다.');
+      }
+    }
   };
 
   return (
