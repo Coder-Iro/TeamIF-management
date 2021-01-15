@@ -35,7 +35,7 @@ interface InputState {
   readonly password: string;
 }
 
-const Login: React.FC = () => {
+const LoginPage: React.FC = () => {
   const [input, setInput] = useState<InputState>({
     id: '',
     password: ''
@@ -111,4 +111,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

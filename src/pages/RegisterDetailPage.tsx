@@ -53,7 +53,7 @@ interface InputState {
   readonly github: string;
 }
 
-const RegisterDetail: React.FC<RegisterDetailProps> = ({
+const RegisterDetailPage: React.FC<RegisterDetailProps> = ({
   code,
   nickname,
   rrole
@@ -232,4 +232,4 @@ const RegisterDetail: React.FC<RegisterDetailProps> = ({
   );
 };
 
-export default RegisterDetail;
+export default RegisterDetailPage;

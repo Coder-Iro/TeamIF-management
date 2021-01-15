@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import Input from '../atomics/Input';
 import InputWidthButton from '../atomics/Button/InputWidthButton';
 import Api from '../api';
-import RegisterDetail from './RegisterDetail';
+import RegisterDetailPage from './RegisterDetailPage';
 import { CodeType } from '../types/Payload';
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const StyledInput = styled(Input)`
   padding: 0;
 `;
 
-const Register: React.FC = () => {
+const RegisterPage: React.FC = () => {
   const history = useHistory();
   const [code, setCode] = useState<string>('');
   const [nickname, setNickname] = useState<string>('');
@@ -70,7 +70,7 @@ const Register: React.FC = () => {
   };
 
   if (success) {
-    return <RegisterDetail code={code} nickname={nickname} rrole={rrole} />;
+    return <RegisterDetailPage code={code} nickname={nickname} rrole={rrole} />;
   }
 
   return (
@@ -95,4 +95,4 @@ const Register: React.FC = () => {
   );
 };
 
-export default Register;
+export default RegisterPage;
