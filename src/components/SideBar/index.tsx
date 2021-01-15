@@ -1,13 +1,15 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   IoBuild,
   IoCheckmarkDoneSharp,
   IoLogOutOutline,
-  IoMdPeople
+  IoMdPeople,
+  IoMenu
 } from 'react-icons/all';
 import { NavLink } from 'react-router-dom';
 import SideBarItem from './SideBarItem';
+import SCREEN_SIZE from '../../styles/ScreenSize';
 
 const StyledSideBar = styled.div`
   min-height: 100vh;
@@ -19,6 +21,34 @@ const StyledSideBar = styled.div`
   box-shadow: 0 0 30px rgba(169, 169, 169, 0.8);
 
   color: white;
+
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    min-height: 100%;
+  }
+`;
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  margin: 3rem 0;
+
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 1rem 0 1rem 1rem;
+  }
+`;
+
+const StyledMenuIcon = styled(IoMenu)`
+  display: none;
+  cursor: pointer;
+
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    display: block;
+    margin-right: 1rem;
+  }
 `;
 
 const PageTitle = styled.h1`
@@ -26,7 +56,24 @@ const PageTitle = styled.h1`
   color: white;
   text-align: center;
 
-  margin: 3rem 0;
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    font-size: 22px;
+    text-align: left;
+  }
+`;
+
+const ItemList = styled.div<{ isOpen: boolean }>`
+  display: block;
+
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  }
+`;
+
+const PCNewLine = styled.br`
+  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
+    display: none;
+  }
 `;
 
 const MenuText = styled.span`
@@ -38,39 +85,48 @@ const activeStyle = {
 };
 
 const SideBar: React.FC = () => {
+  const [isOpen, setOpen] = useState<boolean>(false);
+
   return (
     <StyledSideBar>
-      <PageTitle>
-        TeamIF
-        <br />
-        Management
-      </PageTitle>
+      <Header>
+        <PageTitle>
+          TeamIF <PCNewLine />
+          Management
+        </PageTitle>
+        <StyledMenuIcon
+          onClick={() => setOpen((current) => !current)}
+          size={24}
+        />
+      </Header>
 
-      <NavLink to='/team/manage' activeStyle={activeStyle}>
+      <ItemList isOpen={isOpen}>
+        <NavLink to='/team/manage' activeStyle={activeStyle}>
+          <SideBarItem>
+            <IoMdPeople size={22} />
+            <MenuText>팀원 관리</MenuText>
+          </SideBarItem>
+        </NavLink>
+
+        <NavLink to='/team/recruit' activeStyle={activeStyle}>
+          <SideBarItem>
+            <IoCheckmarkDoneSharp size={22} />
+            <MenuText>팀원 모집</MenuText>
+          </SideBarItem>
+        </NavLink>
+
+        <NavLink to='/project' activeStyle={activeStyle}>
+          <SideBarItem>
+            <IoBuild size={22} />
+            <MenuText>프로젝트 관리</MenuText>
+          </SideBarItem>
+        </NavLink>
+
         <SideBarItem>
-          <IoMdPeople size={22} />
-          <MenuText>팀원 관리</MenuText>
+          <IoLogOutOutline size={22} />
+          <MenuText>로그아웃</MenuText>
         </SideBarItem>
-      </NavLink>
-
-      <NavLink to='/team/recruit' activeStyle={activeStyle}>
-        <SideBarItem>
-          <IoCheckmarkDoneSharp size={22} />
-          <MenuText>팀원 모집</MenuText>
-        </SideBarItem>
-      </NavLink>
-
-      <NavLink to='/project' activeStyle={activeStyle}>
-        <SideBarItem>
-          <IoBuild size={22} />
-          <MenuText>프로젝트 관리</MenuText>
-        </SideBarItem>
-      </NavLink>
-
-      <SideBarItem>
-        <IoLogOutOutline size={22} />
-        <MenuText>로그아웃</MenuText>
-      </SideBarItem>
+      </ItemList>
 
       {/* TODO: 사이드바에 들어갈 메뉴 추가하기 */}
     </StyledSideBar>
