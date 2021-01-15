@@ -7,7 +7,7 @@ import Input from '../atomics/Input';
 import InputWidthButton from '../atomics/Button/InputWidthButton';
 import Api from '../api';
 import RegisterDetail from './RegisterDetail';
-import { CodeType } from '../types/CodeType';
+import { CodeType } from '../types/Payload';
 
 const Container = styled.div`
   height: 100vh;
