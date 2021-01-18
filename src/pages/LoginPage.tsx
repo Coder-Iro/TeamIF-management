@@ -64,11 +64,7 @@ const LoginPage: React.FC = () => {
 
     try {
       const token = btoa(`${input.id}:${input.password}`);
-      await Api.get('/login/', {
-        headers: {
-          Authorization: `Basic ${token}`
-        }
-      });
+      await Api.get('/login/');
 
       TokenUtil.set(token);
       toast('환영합니다.');
