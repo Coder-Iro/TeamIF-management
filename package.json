@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:react": "react-scripts build",
+    "build": "yarn build:react && yarn workbox",
     "test": "react-scripts test",
+    "workbox": "workbox generateSW workbox-config.js",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -39,7 +41,8 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react-hooks": "^4.0.5",
     "prettier": "^2.0.4",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "workbox-cli": "^6.0.2"
   },
   "browserslist": {
     "production": [
