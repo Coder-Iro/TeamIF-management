@@ -4,12 +4,12 @@ import {
   IoBuild,
   IoLogOutOutline,
   IoMdPeople,
-  IoMenu,
   IoPersonCircle
 } from 'react-icons/all';
 import { NavLink } from 'react-router-dom';
 import SideBarItem from './SideBarItem';
 import SCREEN_SIZE from '../../styles/ScreenSize';
+import SideBarHeader from './SideBarHeader';
 
 const StyledSideBar = styled.div`
   min-height: 100vh;
@@ -27,41 +27,6 @@ const StyledSideBar = styled.div`
   }
 `;
 
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin: 3rem 0;
-
-  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
-    flex-direction: row;
-    justify-content: space-between;
-
-    margin: 1rem 0 1rem 1rem;
-  }
-`;
-
-const StyledMenuIcon = styled(IoMenu)`
-  display: none;
-  cursor: pointer;
-
-  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
-    display: block;
-    margin-right: 1rem;
-  }
-`;
-
-const PageTitle = styled.h1`
-  font-size: 26px;
-  color: white;
-  text-align: center;
-
-  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
-    font-size: 22px;
-    text-align: left;
-  }
-`;
-
 const ItemList = styled.div<{ isOpen: boolean }>`
   display: block;
 
@@ -70,57 +35,51 @@ const ItemList = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-const PCNewLine = styled.br`
-  @media screen and (max-width: ${SCREEN_SIZE.TABLET}) {
-    display: none;
-  }
-`;
-
 const MenuText = styled.span`
   margin-left: 4px;
 `;
 
-const activeStyle = {
-  backgroundColor: '#262626'
-};
+const StyledLink = styled(NavLink).attrs({
+  activeClassName: 'nav-item-active'
+})`
+  &.nav-item-active {
+    & > div {
+      background-color: #262626;
+      font-weight: 700;
+      border-right: solid 5px #ffffff;
+    }
+  }
+`;
 
 const SideBar: React.FC = () => {
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const state = useState<boolean>(false);
+  const [isOpen] = state;
 
   return (
     <StyledSideBar>
-      <Header>
-        <PageTitle>
-          TeamIF <PCNewLine />
-          Management
-        </PageTitle>
-        <StyledMenuIcon
-          onClick={() => setOpen((current) => !current)}
-          size={24}
-        />
-      </Header>
+      <SideBarHeader state={state} />
 
       <ItemList isOpen={isOpen}>
-        <NavLink to='/team' activeStyle={activeStyle}>
+        <StyledLink to='/team'>
           <SideBarItem>
             <IoMdPeople size={22} />
             <MenuText>팀원 관리</MenuText>
           </SideBarItem>
-        </NavLink>
+        </StyledLink>
 
-        <NavLink to='/project' activeStyle={activeStyle}>
+        <StyledLink to='/project'>
           <SideBarItem>
             <IoBuild size={22} />
             <MenuText>프로젝트 관리</MenuText>
           </SideBarItem>
-        </NavLink>
+        </StyledLink>
 
-        <NavLink to='/account' activeStyle={activeStyle}>
+        <StyledLink to='/account'>
           <SideBarItem>
             <IoPersonCircle size={22} />
             <MenuText>계정 관리</MenuText>
           </SideBarItem>
-        </NavLink>
+        </StyledLink>
 
         <SideBarItem>
           <IoLogOutOutline size={22} />
