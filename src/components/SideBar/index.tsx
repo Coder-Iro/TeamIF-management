@@ -45,7 +45,7 @@ const StyledLink = styled(NavLink).attrs({
     & > div {
       background-color: #0f1c3d;
       font-weight: 700;
-      border-right: solid 5px #ffffff;
+      border-right: 5px solid #ffffff;
     }
   }
 `;
