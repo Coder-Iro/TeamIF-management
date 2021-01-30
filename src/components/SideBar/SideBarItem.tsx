@@ -14,7 +14,7 @@ const SideBarItem = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: #262626;
+    background-color: #0f1c3d;
   }
 `;
 

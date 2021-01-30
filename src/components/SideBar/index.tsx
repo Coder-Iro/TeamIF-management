@@ -17,8 +17,7 @@ const StyledSideBar = styled.div`
   display: flex;
   flex-direction: column;
 
-  background-color: #333333;
-  box-shadow: 0 0 30px rgba(169, 169, 169, 0.8);
+  background-color: #182c61;
 
   color: white;
 
@@ -44,7 +43,7 @@ const StyledLink = styled(NavLink).attrs({
 })`
   &.nav-item-active {
     & > div {
-      background-color: #262626;
+      background-color: #0f1c3d;
       font-weight: 700;
       border-right: solid 5px #ffffff;
     }
