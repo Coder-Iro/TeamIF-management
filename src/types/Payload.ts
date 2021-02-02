@@ -8,5 +8,13 @@ export interface CodeType {
 }
 
 export interface ProfileType {
-  // TODO: GET /member 엔드포인트 결과
+  readonly discord: number;
+  readonly email: string;
+  readonly github: string;
+  readonly id: string;
+  readonly jobs: string[];
+  readonly level: string;
+  // eslint-disable-next-line camelcase
+  readonly mailgun_id: number;
+  readonly nickname: string;
 }
