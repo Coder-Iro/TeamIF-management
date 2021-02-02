@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import SideBarItem from './SideBarItem';
 import SCREEN_SIZE from '../../styles/ScreenSize';
 import SideBarHeader from './SideBarHeader';
+import TokenUtil from '../../api/TokenUtil';
 
 const StyledSideBar = styled.div`
   min-height: 100vh;
@@ -54,6 +55,15 @@ const SideBar: React.FC = () => {
   const state = useState<boolean>(false);
   const [isOpen] = state;
 
+  const onLogoutClick = () => {
+    // eslint-disable-next-line no-restricted-globals,no-alert
+    const isLogout = confirm('로그아웃 하시겠습니까?');
+    if (isLogout) {
+      TokenUtil.remove();
+      window.location.reload();
+    }
+  };
+
   return (
     <StyledSideBar>
       <SideBarHeader state={state} />
@@ -80,7 +90,7 @@ const SideBar: React.FC = () => {
           </SideBarItem>
         </StyledLink>
 
-        <SideBarItem>
+        <SideBarItem onClick={onLogoutClick} tabIndex={0}>
           <IoLogOutOutline size={22} />
           <MenuText>로그아웃</MenuText>
         </SideBarItem>
