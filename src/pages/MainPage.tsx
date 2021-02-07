@@ -68,7 +68,7 @@ const MainPage: React.FC = () => {
               <TableItem key={v.id}>
                 <td>{v.id}</td>
                 <td>{v.nickname}</td>
-                <td>{v.email}</td>
+                <td>{v.id}@teamif.io</td>
                 <td>
                   {v.jobs.map((job, idx) => (
                     // eslint-disable-next-line react/no-array-index-key
